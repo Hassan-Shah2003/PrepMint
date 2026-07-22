@@ -11,7 +11,6 @@ export const generateInterviewReport = async ({
   const groq = new Groq({
     apiKey: process.env.GROQ_API_KEY,
   });
-  console.log(process.env.GROQ_API_KEY);
   const prompt = `
     You are an expert interview coach.
     Job Description: ${jobDescription}

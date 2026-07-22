@@ -57,12 +57,12 @@ export const useAuth = () => {
     try {
       // setLoading(true);
       const data = await getCurrentUser();
-      console.log(data);
+      // console.log(data);
       setUser(data.user);
       // setLoading(false);
     } catch (error) {
       setLoading(false);
-      console.log(error);
+      // console.log(error);
     } finally {
       setLoading(false);
     }

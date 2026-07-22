@@ -20,7 +20,7 @@ const Home = () => {
     const [error, setError] = useState(null);
     const resumeInputRef = useRef()
     const { loading, loadingAction, generateReport, report, reports } = useInterview()
-    console.log(reports);
+    // console.log(reports);
 
     const navigate = useNavigate()
     const completion = `${jobDescription.length}/${MAX_JOB_DESCRIPTION_LENGTH}`;
@@ -110,7 +110,7 @@ const Home = () => {
             toast.success("Interview Report Generated Successfully")
             navigate(`/interview/${generatedReport._id}`)
         } catch (error) {
-            console.error(error)
+            // console.error(error)
             setStatus("error")
             setError(
                 error?.response?.data?.message ||
